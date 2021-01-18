@@ -1,0 +1,38 @@
+<div class="LoginContainer">
+  <div class="card" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">Sign in</h5>
+      <div class="formGroup">
+        <input
+          type="text"
+          class="formControl"
+          placeholder="Username"
+          #userName
+          required
+        />
+      </div>
+
+      <div class="formGroup">
+        <input
+          type="password"
+          class="formControl"
+          placeholder="Password"
+          #userPassword
+          required
+        />
+      </div>
+
+      <a
+        (click)="authService.SignIn(userName.value, userPassword.value)"
+        class="btn btn-primary"
+        >Log in</a
+      >
+
+      <!-- <a (click)="authService.SignOut()" class="btn btn-primary">Log in</a> -->
+
+      <div>
+        <a routerLink="/forgot-password"> Forgot Password</a>
+      </div>
+    </div>
+  </div>
+</div>
